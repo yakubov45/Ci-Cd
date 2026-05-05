@@ -1,10 +1,10 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 application = Flask(__name__)
 
 @application.route('/')
 def hello():
-    return '<h1>Hi</h1>', 200
+    return render_template('index.html')
 
 @application.route('/health')
 def health():
